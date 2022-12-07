@@ -29,7 +29,7 @@ def set(training):
 		parser.add_argument("--lrStep",		type=int,	default=20000,		help="learning rate decay step size")
 		parser.add_argument("--lambdaDepth",type=float,	default=1.0,		help="loss weight factor (depth)")
 		parser.add_argument("--fromIt",		type=int,	default=0,			help="resume training from iteration number")
-		parser.add_argument("--toIt",		type=int,	default=100000,		help="run training to iteration number")
+		parser.add_argument("--toIt",		type=int,	default=200000,		help="run training to iteration number")
 	else: # evaluation
 		parser.add_argument("--batchSize",	type=int,	default=1,		help="batch size for evaluation")
 	opt = parser.parse_args()

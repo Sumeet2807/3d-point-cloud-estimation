@@ -116,7 +116,7 @@ with tf.Session(config=tfConfig) as sess:
 				summaryWriter.add_summary(sess.run(summaryLoss,feed_dict=batch),(i+1)//500)
 			if (i+1)%10000==0:
 				summaryWriter.add_summary(sess.run(summaryImage,feed_dict=batch),(i+1)//500)
-			if (i+1)%10000==0:
+			if (i+1)%20000==0:
 				util.saveModel(opt,sess,saver,(i+1)//500)
 				print(util.toGreen("model saved: {0}/{1}, it.{2}".format(opt.group,opt.model,(i+1)//500)))
 		dataloader.thread.join()
