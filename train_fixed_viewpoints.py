@@ -120,5 +120,3 @@ with tf.Session(config=tfConfig) as sess:
 				util.saveModel(opt,sess,saver,(i+1)//500)
 				print(util.toGreen("model saved: {0}/{1}, it.{2}".format(opt.group,opt.model,(i+1)//500)))
 		dataloader.thread.join()
-
-print(util.toYellow("======= TRAINING DONE ======="))
