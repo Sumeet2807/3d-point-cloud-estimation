@@ -1,0 +1,14 @@
+Phase - 1
+/apps/tensorflow/2.7.0/bin/python train_fixed_viewpoints.py --model=phase1
+
+
+Phase - 2
+/apps/tensorflow/2.7.0/bin/python train_joint_2d.py --group=0 --model=phase2 --load=phase1_it20
+
+
+
+Generate pointcloud
+/apps/tensorflow/2.7.0/bin/python generate_pointcloud.py  --load=phase2_it60.0
+
+
+train_fixed_viewpoints
